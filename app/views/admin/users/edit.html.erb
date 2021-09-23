@@ -1,4 +1,15 @@
 <h1>Edit User</h1>
+<% if @user.errors.any? %>
+  <div id='error_explanation'>
+    <h2><%= pluralize(@user.errors.count, 'error') %> Prohibited this moderator from being saved:</h2>
+
+    <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
 
 <%= form_for [:admin, @user] do |f| %>
   <p>

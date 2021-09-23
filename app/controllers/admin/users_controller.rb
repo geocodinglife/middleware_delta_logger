@@ -10,8 +10,10 @@ class Admin::UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     if @user.update(user_params)
+      flash[:notice] = 'Moderators was successfully updated'
       redirect_to admin_users_path
     else
+      flash[:alert] = 'There was a problem updating user'
       render :edit
     end
   end
