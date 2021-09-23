@@ -1,0 +1,37 @@
+
+app/mailers/application_mailer.rb,67
+class ApplicationMailer < ActionMailer::BaseApplicationMailer1,0
+
+app/models/application_record.rb,67
+class ApplicationRecord < ActiveRecord::BaseApplicationRecord1,0
+
+app/models/user.rb,40
+class User < ApplicationRecordUser1,0
+
+app/jobs/application_job.rb,58
+class ApplicationJob < ActiveJob::BaseApplicationJob1,0
+
+app/controllers/application_controller.rb,79
+class ApplicationController < ActionController::BaseApplicationController1,0
+
+app/helpers/application_helper.rb,47
+module ApplicationHelperApplicationHelper1,0
+
+app/channels/application_cable/connection.rb,195
+module ApplicationCableApplicationCable1,0
+  class Connection < ActionCable::Connection::BaseConnection2,0
+  class Connection < ActionCable::Connection::BaseApplicationCable::Connection2,0
+
+app/channels/application_cable/channel.rb,177
+module ApplicationCableApplicationCable1,0
+  class Channel < ActionCable::Channel::BaseChannel2,0
+  class Channel < ActionCable::Channel::BaseApplicationCable::Channel2,0
+
+config/application.rb,195
+module MiddlewareDeltaLoggerMiddlewareDeltaLogger22,0
+  class Application < Rails::ApplicationApplication23,0
+  class Application < Rails::ApplicationMiddlewareDeltaLogger::Application23,0
+
+db/migrate/20210923014531_create_users.rb,89
+class CreateUsers < ActiveRecord::Migration[6.1]CreateUsers1,0
+  def changechange2,0

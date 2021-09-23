@@ -1,0 +1,22 @@
+<h1>Moderator Index</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Role</th>
+      <th>Time</th>  
+    </tr>
+  </thead>
+</table>
+
+<% @users.each do |user| %>
+  <tr>
+    <td><%= user.name %></td><br>
+    <td><%= user.role %></td><br>
+    <td><%= time_ago_in_words(user.created_at) %> ago</td>
+    <td>
+      <%= link_to 'Edit', edit_admin_user_path(user) %>
+    </td>
+  </tr>
+<% end%>
